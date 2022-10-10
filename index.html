@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Reindee</title>
+</head>
+
+<body>
+    <!--overlay page drop down-->
+    <div class="overlay">
+        <h1>Reindeer</h1>
+        <span>snow life</span>
+    </div>
+    <!--left bar-->
+    <div class="wrapper">
+        <div class="nav">
+            <!--top left bar-->
+            <div class="logo">
+                <h1><span>rein <br> deer</span> <br>snow life</h1>
+            </div>
+            <!--menu-->
+            <div class="menu-links">
+                <ul>
+                    <li>home.</li>
+                    <li>snow life.</li>
+                    <li>contact.</li>
+                </ul>
+            </div>
+            <!--scroll-->
+            <div class="scrolldown">scroll down</div>
+            <!--text bar-->
+            <div class="text">
+                <div class="title">Reindeer</div>
+                <p>Mauris elementum, dui ac sagittis <br> cursus, libero elit sodales odio</p>
+            </div>
+            <!--wach btn-->
+            <div class="watchnow">
+                <i class="fa fa-play"></i>
+                <a href="#">watch now!</a>
+            </div>
+            <!--media-->
+            <div class="media">
+                <ul>
+                    <li><i class="fa fa-facebook"></i></li>
+                    <li><i class="fa fa-twitter"></i></li>
+                    <li><i class="fa fa-instagram"></i></li>
+                </ul>
+            </div>
+            <!--yellow circle-->
+            <div class="ellipse-container">
+                <div class="ellipse thin"></div>
+                <div class="ellipse thick"></div>
+                <div class="ellipse yellow"></div>
+                <div class="circle1"><span>Maecenas purus at</span></div>
+                <div class="circle2"><span>Fringilla Maecenas</span></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        TweenMax.to("overlay h1", 2, {
+            opacity: 0,
+            y: -60,
+            ease: Expo.easeInOut
+        })
+        TweenMax.to(".overlay span", 2, {
+            delay: .3,
+            opacity: 0,
+            y: -60,
+            ease: Expo.easeInOut
+        })
+        TweenMax.to(".overlay", 2, {
+            delay: 1,
+            top: "-100%",
+            ease: Expo.easeInOut
+        })
+        TweenMax.from(".ellipse-container", 1, {
+            delay: 2,
+            opacity: 0,
+            ease: Expo.easeInOut
+        })
+        TweenMax.from(".yellow", 1, {
+            delay: 3.5,
+            opacity: 0,
+            ease: Expo.easeInOut
+        })
+        TweenMax.from(".circle1", 1, {
+            delay: 2.4,
+            opacity: 0,
+            ease: Expo.easeInOut
+        })
+
+        TweenMax.from(".circle2", 1, {
+            delay: 2.6,
+            opacity: 0,
+            ease: Expo.easeInOut
+        })
+
+        TweenMax.from(".logo", 1, {
+            delay: 3,
+            opacity: 0,
+            y: -100,
+            ease: Expo.easeInOut
+        })
+        TweenMax.staggerFrom(".menu-links ul li", 1, {
+            delay: 3.2,
+            opacity: 0,
+            x: -100,
+            ease: Expo.easeInOut
+        }, 0.08 /*time between each li*/ )
+        TweenMax.from(".scrolldown", 1, {
+            delay: 3.4,
+            opacity: 0,
+            y: 100,
+            ease: Expo.easeInOut
+        })
+        TweenMax.from(".text .title", 1, {
+            delay: 3,
+            opacity: 0,
+            x: 200,
+            ease: Expo.easeInOut
+        })
+        TweenMax.from(".text p", 1, {
+            delay: 3.2,
+            opacity: 0,
+            x: 200,
+            ease: Expo.easeInOut
+        })
+        TweenMax.from(".watchnow", 1, {
+            delay: 3.4,
+            opacity: 0,
+            x: 200,
+            ease: Expo.easeInOut
+        })
+        TweenMax.staggerFrom(".media ul li", 1, {
+            delay: 3,
+            opacity: 0,
+            y: 100,
+            ease: Expo.easeInOut
+        }, 0.08)
+    </script>
+
+</body>
+
+</html>
